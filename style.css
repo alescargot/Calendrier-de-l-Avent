@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(christmas.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  user-select: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5rem;
+  display: grid;
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  grid-template-rows: 15vh 80vh 5vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  position: relative;
+  grid-area: header;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+h1 {
+  position: absolute;
+  left: 22vh;
+  top: 0;
+}
+
+main {
+  color: #000;
+  width: 100%;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+  grid-template-areas:
+    "day1 day2 day3 day4 day5 day6"
+    "day7 day8 day9 day10 day11 day12"
+    "day13 day14 day15 day16 day17 day18"
+    "day19 day20 day21 day22 day23 day24";
+}
+
+.box {
+  grid-area: auto;
+  position: relative;
+  border-radius: 20%;
+  background-color: rgb(255, 4, 66);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px;
+}
+
+.box h3 {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  margin: 0;
+}
+
+img,
+iframe {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+}
